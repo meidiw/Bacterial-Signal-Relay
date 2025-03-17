@@ -266,7 +266,7 @@ nexttile
 k3=imresize(yfp_matrix_rgb3,[2000 1022]);
 imshow(k3);
 hold on
-plot(flip(m3(1:10)),t,'color','#FFC000','LineWidth',2)
+plot(flip(m3(1:10)),t,'color','#FFB38F','LineWidth',2)
 axis on
 xticks([1 340 681 1021]);
 %xticklabels({})
@@ -416,7 +416,7 @@ l2 = shadedErrorBar(t(ptime),[m1(ptime)*0.01468,m2(ptime)*0.01468,m3(ptime)*0.01
 l2 = l2.mainLine;
 l3= shadedErrorBar(t(ptime),[m21(ptime)*0.01468,m22(ptime)*0.01468,m23(ptime)*0.01468]',{@mean,@std},'lineprops',{'-o','color','#ADD8E6'}); 
 l3 = l3.mainLine;
-l4=shadedErrorBar(t(ptime),[m31(ptime)*0.01468,m32(ptime)*0.01468,m33(ptime)*0.01468]',{@mean,@std},'lineprops',{'-o','color','#FFC000'}); 
+l4=shadedErrorBar(t(ptime),[m31(ptime)*0.01468,m32(ptime)*0.01468,m33(ptime)*0.01468]',{@mean,@std},'lineprops',{'-o','color','#FFB38F'}); 
 l4 = l4.mainLine;
 l5=shadedErrorBar(t(ptime),[m41(ptime)*0.01468,m42(ptime)*0.01468,m43(ptime)*0.01468]',{@mean,@std},'lineprops',{'-o','color','#0072BD'}); 
 l5 = l5.mainLine;
@@ -548,7 +548,7 @@ l2 = shadedErrorBar(t(ptime),[m1(ptime)*0.01468,m2(ptime)*0.01468,m3(ptime)*0.01
 l2 = l2.mainLine;
 l3= shadedErrorBar(t(ptime),[m21(ptime)*0.01468,m22(ptime)*0.01468,m23(ptime)*0.01468]',{@mean,@std},'lineprops',{'--o','color','#ADD8E6'}); 
 l3 = l3.mainLine;
-l4=shadedErrorBar(t(ptime),[m31(ptime)*0.01468,m32(ptime)*0.01468,m33(ptime)*0.01468]',{@mean,@std},'lineprops',{'--o','color','#FFC000'}); 
+l4=shadedErrorBar(t(ptime),[m31(ptime)*0.01468,m32(ptime)*0.01468,m33(ptime)*0.01468]',{@mean,@std},'lineprops',{'--o','color','#FFB38F'}); 
 l4 = l4.mainLine;
 l5=shadedErrorBar(t(ptime),[m41(ptime)*0.01468,m42(ptime)*0.01468,m43(ptime)*0.01468]',{@mean,@std},'lineprops',{'--o','color','#0072BD'}); 
 l5 = l5.mainLine;
