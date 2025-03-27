@@ -37,23 +37,13 @@ J4 = 2;
 Z4 = 0.05; 
 b4 = 3.5; 
 
-% R = 20; % mm
-% r = [0 logspace(-2,log10(R),1e3)]';%logspace(-3,3,1e3)';
-% M = length(r);
-% 
-% T = 10; % h
-% t = [0 logspace(-3,log10(T),1e2)]';%logspace(-3,2,1e2);
-% N = length(t);
+
 
 R = 30; % mm
-% r = [0 logspace(-2,log10(R),1e3)]';%logspace(-3,3,1e3)';
-% r = logspace(-2,log10(R),1e4)';%logspace(-3,3,1e3)';
 r = linspace(0,30,3000)';
 M = length(r);
 
 T = 10; % h, determined by experiments 
-% t = [0 logspace(-3,log10(T),1e2)]';%logspace(-3,2,1e2);
-% t = logspace(-3,log10(T),1e2)';%logspace(-3,2,1e2);
 t = linspace(0,10,2000)'; 
 N = length(t);
 
