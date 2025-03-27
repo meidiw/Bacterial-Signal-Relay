@@ -9,6 +9,30 @@ namepath1 = [crt_path '/experiment data/IS-PF-/'];
 namepath2 = [crt_path '/experiment data/IS+PF-/'];
 namepath3 = [crt_path '/experiment data/IS-PF+/'];
 namepath4 = [crt_path '/experiment data/IS+PF+/'];
+
+%% figure 2b
+num = xlsread([crt_path  '/experiment data/source data file.xlsx'],'fig 2b');
+data_idx = ~isnan(num(:, 1));
+data = num(data_idx,[2:4,6:8]);
+
+conc = [100,10,1,0.1,0.01]; % erythromycin
+figure
+hold on
+
+l3= shadedErrorBar(conc,transpose(data(1:5,1:3)),{@mean,@std},'lineprops',{'-o','color','#1C1C1C','MarkerSize',8}); 
+l3 = l3.mainLine;
+l4=shadedErrorBar(conc,transpose(data(1:5,4:6)),{@mean,@std},'lineprops',{'-^','color','#1C1C1C','MarkerSize',8}); 
+l4 = l4.mainLine;
+
+box on
+
+set(gca, 'YScale', 'log')
+set(gca, 'XScale', 'log')
+ylabel('YFP(a.u.)')
+xlabel('erythromycin conc (ug/ml)')
+xticklabels({'0', '10^{-1}', '10^0','10^1', '10^2'})
+leg1=legend([l3 l4],'IS+ PF+ LD+','IS+ PF+ LD-','Location','southeast');
+
 %%
 t = [3,3.5,4,4.5,5,5.5,6,6.5,7,7.5,8,8.5,9,9.5,10];
 ptime = [1:15];
@@ -16,8 +40,6 @@ ptime = [1:15];
 xx1 = linspace(3,10,100);
 yy1 = 1*xx1.^(1);
 yy2 =3/sqrt(3)*xx1.^(1/2);
-
-t = [3,3.5,4,4.5,5,5.5,6,6.5,7,7.5,8,8.5,9,9.5,10];
 
 ptime = [1:15];
 allcent = 1;
